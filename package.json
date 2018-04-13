@@ -1,0 +1,45 @@
+{
+  "name": "cards",
+  "version": "0.1.0",
+  "main": "build/api.js",
+  "scripts": {
+    "webpack": "webpack",
+    "test-core": "NODE_ENV=test; nyc ava test/utils.js && nyc ava test/core.js",
+    "test-api": "NODE_ENV=test; nyc ava test/api.js",
+    "test": "npm run test-core && npm run test-api",
+    "start": "node build/api.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-http-context": "^1.0.0",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-istanbul": "^4.1.6",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "nyc": "^11.6.0",
+    "webpack": "^4.5.0",
+    "webpack-cli": "^2.0.14"
+  },
+  "nyc": {
+    "require": [
+      "babel-register"
+    ],
+    "exclude": [
+      "build"
+    ]
+  },
+  "ava": {
+    "verbose": true,
+    "require": [
+      "babel-register"
+    ]
+  }
+}
