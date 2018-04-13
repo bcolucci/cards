@@ -54,6 +54,8 @@ The Deck model is simply:
 
 The core and the API have a total size less than **900 kB**. Mainly because of Express, the core is only **9 kB**...
 
+The core only contains less than **50 lines of code**.
+
 ## Execution time
 
 With the core lib, it's possible to create and shuffle **around 751 decks per second**.
@@ -112,24 +114,24 @@ dealAndLog()
 
 ## Test report
 
-There are 42 tests (unit && integration). 
+There are 40+ tests (unit && integration). 
 This is the coverage report, please consider the fact that most of the uncovered lines are some very basic expressions (composition, recursive call etc...):
 
     $ node_modules/.bin/nyc report
 
 File               |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
 -------------------|----------|----------|----------|----------|-------------------|
-All files          |    96.98 |    76.81 |    93.68 |    98.48 |                   |
-src               |    96.09 |    74.07 |     90.2 |    98.77 |                   |
+All files          |    96.58 |    76.81 |    92.63 |    98.47 |                   |
+ src               |    95.24 |    74.07 |    88.24 |    98.73 |                   |
   core.js          |      100 |      100 |      100 |      100 |                   |
-  utils.js         |    95.19 |    70.83 |    89.36 |    98.31 |                92 |
-src/api           |       95 |      100 |       50 |      100 |                   |
+  utils.js         |    94.23 |    70.83 |    87.23 |    98.31 |                92 |
+ src/api           |       95 |      100 |       50 |      100 |                   |
   app.js           |       95 |      100 |       50 |      100 |                   |
-src/api/deck      |    96.72 |    83.33 |      100 |    96.15 |                   |
+ src/api/deck      |    96.72 |    83.33 |      100 |    96.15 |                   |
   arrRepository.js |      100 |    83.33 |      100 |      100 |                16 |
   router.js        |    93.55 |    83.33 |      100 |    92.31 |             14,15 |
   service.js       |      100 |      100 |      100 |      100 |                   |
-test              |      100 |      100 |      100 |      100 |                   |
+ test              |      100 |      100 |      100 |      100 |                   |
   api.js           |      100 |      100 |      100 |      100 |                   |
 
 ## Curl call

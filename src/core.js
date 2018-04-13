@@ -45,5 +45,6 @@ export const newDeck = () => {
   return recur()
 }
 
-export const pickCardsStr = u.map(u.attr('str'))
-export const deckStr = u.compose(u.join(''), pickCardsStr)
+// optional
+//const pickCardsStr = u.map(u.attr('str'))
+//const deckStr = u.compose(u.join(''), pickCardsStr)

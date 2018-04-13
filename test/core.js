@@ -106,9 +106,10 @@ test('newDeck', t => {
   ])
 })
 
-test('deckStr', t => {
+// optional
+/*test('deckStr', t => {
   const deck = core.newDeck()
   const expected = '🂡🂢🂣🂤🂥🂦🂧🂨🂩🂪🂫🂭🂮🂱🂲🂳🂴🂵🂶🂷🂸🂹🂺🂻🂽🂾🃁🃂🃃🃄🃅🃆🃇🃈🃉🃊🃋🃍🃎🃑🃒🃓🃔🃕🃖🃗🃘🃙🃚🃛🃝🃞'
   t.deepEqual(core.pickCardsStr(deck).join(''), expected)
   t.deepEqual(core.deckStr(deck), expected)
-})
+})*/
