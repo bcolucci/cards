@@ -15,7 +15,23 @@ Okay, it's probably not 100% functional but it's a good try!
 The Card model is very simple:
 
 ```javascript
-{"suit":1,"value":7,"code":"1f0b7","str":"🂷"}
+{
+  suit: Number,
+  value: Number,
+  code: String,
+  str: String
+}
+```
+
+e.g.:
+
+```javascript
+{
+  suit: 1,
+  value: 7,
+  code: '1f0b7',
+  str: '🂷'
+}
 ```
 
 * **suit**: The card suit, a number between 0 and 3. From the source:
@@ -27,6 +43,12 @@ const suits = { spade: 0, heart: 1, diamond: 2, club: 3 }
 * **value**: The card value, between 1 (Ace) and 14 (King) :
 * **code**: The hexadecimal code for the unicode representation of the card ;
 * **str**: The unicode representation of the card.
+
+The Deck model is simply:
+
+```javascript
+{ id: Number, cards: Array[Card] }
+```
 
 ## Total size
 
